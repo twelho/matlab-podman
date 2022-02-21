@@ -10,6 +10,7 @@ create:
 	read -p "Log in, install toolboxes (as root) and press ENTER to continue... " && \
 	podman stop "$$CONTAINER" && \
 	podman commit -c CMD=[] "$$CONTAINER" "matlab-gcc:${MATLAB_RELEASE}" && \
+	podman rm "$$CONTAINER" && \
 	podman create -t -e "DISPLAY=${DISPLAY}" --name matlab \
 		--uidmap 1000:0:1 --uidmap 65534:1:1 --uidmap 0:2:125 \
 		-v ..:/home/matlab/Documents/MATLAB \
