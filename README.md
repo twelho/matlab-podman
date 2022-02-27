@@ -24,6 +24,6 @@ GCC and allowing the installation of toolboxes during setup.
 5. Run `make (run)` to start the persistent `matlab` container. Note that you
    will be asked to authenticate if the session has expired since the last start.
 
-## Authors
+## Maintainers
 
 - Dennis Marttinen ([@twelho](https://github.com/twelho))
